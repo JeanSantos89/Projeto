@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Dados</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Envie seus dados</h2>
+        <form action="/armazenar_dados" method="post">
+            <div class="grid-item">
+                <label for="nomeCompleto">Nome:</label>
+                <input type="text" id="nomeCompleto" name="nomeCompleto" required>
+            </div>
+            <div class="grid-item">
+                <label for="telefoneContato">Telefone:</label>
+                <input type="tel" id="telefoneContato" name="telefoneContato" class="adicionar_telefone" maxlength="14" required>
+            </div>
+            <div class="grid-item">
+                <label for="dataNascimento">Data de Nascimento:</label>
+                <input type="date" id="dataNascimento" name="dataNascimento" required>
+            </div>
+            <div class="grid-item">
+                <label for="rendaMensal">Renda Média:</label>
+                <div class="input-wrapper">
+                    <span class="moeda-symbol">R$</span>
+                    <input type="number" id="rendaMensal" name="rendaMensal" step="0.01" required class="moeda_input">
+                </div>
+            </div>
+            <div class="grid-item">
+                <label for="numeroFilhos">Número de Filhos:</label>
+                <input type="number" id="numeroFilhos" name="numeroFilhos" required>
+            </div>
+            <div class="grid-item">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="grid-item">
+                <label for="pais">País:</label>
+                <input type="text" id="pais" name="pais" required>
+            </div>
+            <div class="grid-item">
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado" required>
+            </div>
+            <div class="grid-item">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required>
+            </div>
+            <div class="grid-item">
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro" required>
+            </div>
+            <div class="grid-item">
+                <label for="nomeRua">Nome da Rua:</label>
+                <input type="text" id="nomeRua" name="nomeRua" required>
+            </div>
+            <div class="grid-item">
+                <label for="numeroResidencial">Número:</label>
+                <input type="text" id="numeroResidencial" name="numeroResidencial" required>
+            </div>
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/mask.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+Este projeto de nível iniciante utiliza MySQL, Flask, CSS, HTML, JavaScript e Python. A aplicação consiste em capturar dados de um formulário HTML, enviá-los para o backend em Python via Flask, onde é estabelecida uma conexão com o banco de dados MySQL. Os dados são então armazenados na tabela correspondente dentro do banco de dados.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
